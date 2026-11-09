@@ -1,0 +1,338 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Soham Kurkute</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #eef1f4;
+    --surface: #ffffff;
+    --surface-2: #f4f6f8;
+    --ink: #141a20;
+    --muted: #586472;
+    --line: #dde3e9;
+    --accent: #0f8b8d;
+    --accent-ink: #0a6163;
+    --amber: #c67a16;
+    --shadow: 0 1px 2px rgba(20,26,32,.06), 0 8px 24px rgba(20,26,32,.06);
+    --f-sans: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c1013;
+      --surface: #151b21;
+      --surface-2: #1b232a;
+      --ink: #e8edf1;
+      --muted: #9aa7b4;
+      --line: #27313a;
+      --accent: #2bb7b0;
+      --accent-ink: #7fe0d7;
+      --amber: #e0a24a;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.45);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c1013;
+    --surface: #151b21;
+    --surface-2: #1b232a;
+    --ink: #e8edf1;
+    --muted: #9aa7b4;
+    --line: #27313a;
+    --accent: #2bb7b0;
+    --accent-ink: #7fe0d7;
+    --amber: #e0a24a;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.45);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--f-sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 580px;
+    margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 28px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .eyebrow { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 10px; }
+  .hero { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 24px; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--amber)); }
+  .idrow { display: flex; align-items: center; gap: 16px; margin-top: 6px; }
+  .avatar { flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2); border: 1px solid var(--line); color: var(--accent-ink); font-family: var(--f-mono); font-weight: 600; font-size: 1.3rem; letter-spacing: .02em; }
+  h1 { font-size: 1.5rem; line-height: 1.15; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+  .role { color: var(--muted); font-size: .92rem; margin: 2px 0 0; }
+  .tagline { margin: 16px 0 0; font-size: 1rem; color: var(--ink); }
+  .meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: .82rem; color: var(--muted); font-family: var(--f-mono); }
+  .meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex: 0 0 auto; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .btn { flex: 1 1 auto; min-width: 140px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 16px; border-radius: 10px; font-weight: 600; font-size: .9rem; text-decoration: none; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); cursor: pointer; transition: transform .08s ease, background .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn svg { width: 17px; height: 17px; }
+  .copied { font-family: var(--f-mono); font-size: .72rem; color: var(--accent-ink); }
+  section.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 22px 24px; }
+  section.card h2 { font-size: 1.05rem; margin: 0 0 14px; letter-spacing: -.01em; }
+  p.lead { margin: 0; color: var(--ink); font-size: .95rem; }
+  p.lead + p.lead { margin-top: 10px; }
+  .skills { display: flex; flex-direction: column; gap: 14px; }
+  .sgroup .slabel { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag { font-family: var(--f-mono); font-size: .76rem; padding: 4px 9px; border-radius: 7px; background: var(--surface-2); border: 1px solid var(--line); color: var(--ink); min-width: 0; }
+  .projects { display: flex; flex-direction: column; gap: 0; }
+  .proj { padding: 16px 0; border-top: 1px solid var(--line); display: flex; gap: 14px; }
+  .proj:first-child { border-top: 0; padding-top: 0; }
+  .proj .num { font-family: var(--f-mono); font-size: .78rem; color: var(--accent-ink); flex: 0 0 auto; padding-top: 2px; }
+  .proj h3 { margin: 0 0 4px; font-size: .96rem; }
+  .proj p { margin: 0; font-size: .86rem; color: var(--muted); }
+  .proj .stack { margin-top: 8px; font-family: var(--f-mono); font-size: .72rem; color: var(--accent-ink); }
+  .entry { display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .entry:first-of-type { border-top: 0; padding-top: 0; }
+  .entry .top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .entry .title { font-weight: 600; font-size: .94rem; }
+  .entry .when { font-family: var(--f-mono); font-size: .76rem; color: var(--muted); white-space: nowrap; }
+  .entry .org { color: var(--accent-ink); font-size: .86rem; }
+  .entry .desc { color: var(--muted); font-size: .85rem; margin-top: 4px; }
+  footer { text-align: center; color: var(--muted); font-size: .78rem; font-family: var(--f-mono); padding-top: 4px; }
+  footer a { color: var(--accent-ink); }
+  .avail { display: inline-flex; align-items: center; gap: 7px; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent-ink); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); padding: 5px 12px; border-radius: 999px; font-family: var(--f-mono); font-size: .74rem; letter-spacing: .04em; }
+  .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  @media (prefers-reduced-motion: no-preference) { .pulse { animation: pulse 2s ease-in-out infinite; } @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .35 } } }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">Mechatronik · Robotik · EV</p>
+    <div class="idrow">
+      <img class="avatar" style="object-fit:cover" src="data:image/jpeg;base64,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" alt="Soham Kurkute">
+      <div>
+        <h1>Soham Vilas Kurkute</h1>
+        <p class="role">M.Sc. Mechatronik · RWU Ravensburg-Weingarten · ehem. Konstrukteur, Tata Technologies</p>
+      </div>
+    </div>
+
+    <p class="tagline">Mechatronikingenieur mit 1,5 Jahren Konstruktionserfahrung bei Tata Technologies auf Jaguar-Land-Rover-EV-Programmen, der an der RWU jetzt Robotik- und Perzeptionsprojekte mit ROS 2, Python und Computer Vision aufbaut.</p>
+
+    <div class="meta">
+      <span><i class="dot"></i>Weingarten, Deutschland</span>
+      <span><i class="dot"></i>Offen für Werkstudent &amp; Praktika</span>
+      <span><i class="dot"></i>Sofort verfügbar · umzugsbereit</span>
+      <span><i class="dot"></i>Deutsch B1 · Englisch C1</span>
+    </div>
+
+    <div class="actions">
+      <a class="btn primary" href="https://www.linkedin.com/in/soham-kurkute" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn" href="https://drive.google.com/drive/folders/1l8xqrivL_c_T-4T7jbnySepkInrVvnaH?usp=sharing" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        Lebenslauf (PDF)
+      </a>
+      <button class="btn" id="emailBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+        <span id="emailLabel">E-Mail kopieren</span>
+      </button>
+    </div>
+    <p class="copied" id="emailText">sohamkurkute2012@gmail.com</p>
+    <p class="copied" style="margin-top:3px">+49 155 1094 1064</p>
+  </header>
+
+  <section class="card">
+    <h2>Profil</h2>
+    <p class="lead">Masterstudent der Mechatronik an der RWU mit solider maschinenbaulicher Grundlage und 1,5 Jahren Industrieerfahrung in der EV-Antriebskühlung bei Tata Technologies (Jaguar-Land-Rover-Programme). Sicher in 3D-CAD (CATIA, SolidWorks), GD&amp;T ISO/DIN, DFM/DFA, Thermo- und Leitungsführung sowie A2MAC1-Wettbewerbsanalyse aus realer Serienarbeit.</p>
+    <p class="lead">An der RWU habe ich Robotik und Perzeption aufgebaut: ROS 2, Computer Vision, Sensorfusion und STM32-Embedded, durch praktische Projekte. Was ich gegenüber reinen Software-Kandidaten mitbringe, ist die mechanische und die Hardware-Seite, was gut zu Robotik, Bildverarbeitung, Automatisierung und Sondermaschinenbau passt.</p>
+  </section>
+
+  <section class="card">
+    <h2>🇬🇧 Short profile (English)</h2>
+    <p class="lead">Mechatronics engineer with production CAD experience at Tata on Jaguar Land Rover EV programmes, now building robotics and perception projects (ROS 2, computer vision) at RWU. Available immediately, open to Werkstudent and internship roles across Germany.</p>
+  </section>
+
+  <section class="card">
+    <h2>Ich suche</h2>
+    <p class="lead">Werkstudent- und Praktikumsstellen (Teilzeit oder 6 bis 12 Monate Vollzeit), bundesweit, in Robotik und Automatisierung, Perzeption und Computer Vision, Versuch und Test, mechanischer und mechatronischer Konstruktion sowie Benchmarking und Produktplanung.</p>
+  </section>
+
+  <section class="card">
+    <h2>Sprachen</h2>
+    <p class="lead">Englisch: C1 (IELTS 7.0) · Deutsch: B1 (telc), B2 in Vorbereitung · Hindi: Muttersprache</p>
+  </section>
+
+  <section class="card">
+    <h2>Kernkompetenzen</h2>
+    <div class="skills">
+      <div class="sgroup">
+        <p class="slabel">Konstruktion &amp; CAD</p>
+        <div class="tags">
+          <span class="tag">CATIA V5/V6</span><span class="tag">3DEXPERIENCE</span><span class="tag">SolidWorks</span><span class="tag">GD&amp;T</span><span class="tag">DFM / DFA</span><span class="tag">Teamcenter PLM</span>
+        </div>
+      </div>
+      <div class="sgroup">
+        <p class="slabel">Simulation &amp; Thermomanagement</p>
+        <div class="tags">
+          <span class="tag">ANSYS Fluent (CFD)</span><span class="tag">Wärmeübertragung</span><span class="tag">A2MAC1-Benchmarking</span><span class="tag">Toleranzkettenanalyse</span>
+        </div>
+      </div>
+      <div class="sgroup">
+        <p class="slabel">Robotik &amp; Perzeption</p>
+        <div class="tags">
+          <span class="tag">ROS 2</span><span class="tag">OpenCV</span><span class="tag">YOLOv8</span><span class="tag">ArUco-Marker</span><span class="tag">Sensorfusion (Kamera/LiDAR/Radar)</span><span class="tag">Gazebo / RViz</span><span class="tag">Nav2 · AMCL · EKF</span>
+        </div>
+      </div>
+      <div class="sgroup">
+        <p class="slabel">Programmierung &amp; Embedded</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">C / C++</span><span class="tag">MATLAB / Simulink</span><span class="tag">STM32 (Cortex-M4)</span><span class="tag">Git / GitLab</span><span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="sgroup">
+        <p class="slabel">Praktisch</p>
+        <div class="tags">
+          <span class="tag">Löten</span><span class="tag">Servoverdrahtung</span><span class="tag">Mechanische Montage</span><span class="tag">Prüfstandsaufbau</span><span class="tag">FDM-3D-Druck</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Ausgewählte Projekte</h2>
+    <div class="projects">
+      <div class="proj">
+        <span class="num">01</span>
+        <div>
+          <h3>LiDAR-Radar-Kamera-Sensorfusion</h3>
+          <p>Masterprojekt im Team. Multisensor-Auswertung bei klaren und Nebelbedingungen (Velodyne, Blickfeld, TI-Radar) sowie Kamera-LiDAR-3D-Fahrzeugerkennung: YOLOv8-Segmentierung mit in das Bild projizierten Punktwolken, ausgewertet auf KITTI.</p>
+          <p class="stack">Python · OpenCV · YOLOv8 · KITTI</p>
+        </div>
+      </div>
+      <div class="proj">
+        <span class="num">02</span>
+        <div>
+          <h3>KITTI-Fahrzeugerkennung &amp; Distanzschätzung</h3>
+          <p>YOLOv8-Detektion auf KITTI-Szenen mit IoU-basierter Precision/Recall sowie monokulare Distanzschätzung über Kameraintrinsiken und ein Pinhole-Modell.</p>
+          <p class="stack">Python · OpenCV · YOLOv8</p>
+        </div>
+      </div>
+      <div class="proj">
+        <span class="num">03</span>
+        <div>
+          <h3>ArUco-Marker-Erkennung &amp; Posenschätzung</h3>
+          <p>OpenCV-ArUco-Marker-Erkennung und Kameraposenschätzung zur Lokalisierung, mit Rückführung der Pose zur Roboter-Ausrichtung.</p>
+          <p class="stack">Python · OpenCV · ArUco</p>
+        </div>
+      </div>
+      <div class="proj">
+        <span class="num">04</span>
+        <div>
+          <h3>Mobile-Roboter-Navigation &amp; Lokalisierung</h3>
+          <p>ROS-2-Navigationsstack in Gazebo/RViz (Nav2, AMCL, EKF und LiDAR), verwaltet auf GitLab mit Branches, Issues, CI und Dokumentation.</p>
+          <p class="stack">ROS 2 · Gazebo · Nav2 · GitLab CI</p>
+        </div>
+      </div>
+      <div class="proj">
+        <span class="num">05</span>
+        <div>
+          <h3>Sprachgesteuerter KUKA KR4 R600 Digitaler Zwilling</h3>
+          <p>Python-Digitalzwilling eines 6-Achs-KUKA-Arms mit Vorwärts- und Rückwärtskinematik, Sprachsteuerung und OpenGL-Visualisierung. Industriearm-Kinematik neben der mobilen Robotik.</p>
+          <p class="stack">Python · FK/IK · OpenGL</p>
+        </div>
+      </div>
+      <div class="proj">
+        <span class="num">06</span>
+        <div>
+          <h3>3-Achs-Roboterarm &amp; Prüfstand</h3>
+          <p>Kompletter Hardware-Aufbau: alle Strukturteile in SolidWorks konstruiert, per 3D-Druck und Bearbeitung gefertigt, Servoaktoren und Endeffektor montiert und Wiederholgenauigkeit unter Last geprüft. Veröffentlicht im IJSREM.</p>
+          <p class="stack">SolidWorks · 3D-Druck · Servoaktoren</p>
+        </div>
+      </div>
+      <div class="proj">
+        <span class="num">07</span>
+        <div>
+          <h3>EV-Antriebskühlung · Tata / JLR</h3>
+          <p>Serienkonstruktion von Wärmetauschern, Schläuchen und Lüfterzargen für Range Rover Sport und Defender; eine Service-Halterungsstudie reduzierte die Servicezeit auf <strong style="color:var(--ink)">3,48 h (OHX)</strong> und <strong style="color:var(--ink)">2,88 h (LTR)</strong>.</p>
+          <p class="stack">CATIA V5/V6 · DFM/DFA · A2MAC1</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Berufserfahrung</h2>
+    <div class="entry">
+      <div class="top">
+        <span class="title">Konstrukteur (Design Engineer)</span>
+        <span class="when">Feb 2024 – Sep 2025</span>
+      </div>
+      <span class="org">Tata Technologies · Jaguar-Land-Rover-Programme</span>
+      <span class="desc">EV-Kühlkomponenten in CATIA V5/V6, 3DEXPERIENCE und Teamcenter. GD&amp;T und Toleranzkettenanalyse, DMU-/Bauraumstudien, Design-Reviews, 2D-Zeichnungsfreigabe und A2MAC1-Wettbewerbsanalyse.</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Bildung</h2>
+    <div class="entry">
+      <div class="top">
+        <span class="title">M.Sc. Mechatronik</span>
+        <span class="when">2025 – 2027 (vorauss.)</span>
+      </div>
+      <span class="org">RWU Ravensburg-Weingarten</span>
+      <span class="desc">Intelligente Robotik, Embedded Computing, Advanced Control Systems, Simulation mechatronischer Systeme.</span>
+    </div>
+    <div class="entry">
+      <div class="top">
+        <span class="title">B.Tech Maschinenbau</span>
+        <span class="when">2020 – 2024</span>
+      </div>
+      <span class="org">Vishwakarma Institute of Technology (VIT), Pune</span>
+      <span class="desc"><strong style="color:var(--ink)">8,23 CGPA, First Class with Distinction</strong>. Thermische und mechanische Grundlagen in Wärmetauschern, CFD und Fertigung.</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="avail"><span class="pulse"></span>Sofort verfügbar · Weingarten, Deutschland</div>
+    <p style="margin-top:12px">sohamkurkute2012@gmail.com · <a href="https://www.linkedin.com/in/soham-kurkute" target="_blank" rel="noopener">LinkedIn</a></p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var email = "sohamkurkute2012@gmail.com";
+    var btn = document.getElementById("emailBtn");
+    var label = document.getElementById("emailLabel");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        function ok() { label.textContent = "Kopiert ✓"; setTimeout(function(){ label.textContent = "E-Mail kopieren"; }, 1800); }
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(ok).catch(select);
+          } else { select(); }
+        } catch (e) { select(); }
+        function select() {
+          var t = document.getElementById("emailText");
+          var r = document.createRange(); r.selectNodeContents(t);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          label.textContent = "Markieren & kopieren ↑";
+          setTimeout(function(){ label.textContent = "E-Mail kopieren"; }, 2200);
+        }
+      });
+    }
+  })();
+</script>
+
+</body></html>
